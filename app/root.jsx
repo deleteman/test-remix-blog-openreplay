@@ -4,7 +4,6 @@ import {
   Meta,
   Outlet,
   Scripts,
-  useEffect,
   ScrollRestoration,
 } from "@remix-run/react";
 import Tracker from '@openreplay/tracker/cjs';
@@ -21,7 +20,7 @@ const tracker = new Tracker({
 });
 
 export default function App() {
-  useEffect(() => { // use componentDidMount in case of React Class Component
+  React.useEffect(() => { // use componentDidMount in case of React Class Component
     tracker.start();
   }, []);
  
